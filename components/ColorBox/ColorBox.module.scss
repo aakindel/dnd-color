@@ -1,0 +1,101 @@
+/* ========================================================================= */
+/* Color Box */
+/* ========================================================================= */
+
+.color-box-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 6px;
+  height: max-content;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  gap: 10px;
+}
+
+.color-box-container:hover {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.color-box {
+  height: 40px;
+  width: 40px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.text-container__text {
+  font-size: 12px;
+  line-height: 1;
+  align-self: center;
+  justify-self: center;
+}
+
+.text-container__color-name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: #333;
+}
+
+.text-container__color-variable-name {
+  font-size: 12px;
+  line-height: 1;
+  background-color: #f3f3f3;
+  color: #909090;
+}
+
+.text-container__color-value {
+  font-size: 12px;
+  line-height: 1;
+  color: #909090;
+}
+
+.text-container__color-name:focus,
+.text-container__color-value:focus {
+  outline: none;
+  border-radius: 2px;
+  outline-offset: 1px;
+  outline: 2px solid #888;
+}
+
+/* ========================================================================= */
+/* Add Color Box */
+/* ========================================================================= */
+
+.add-color-box-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  // height: 40px;
+  padding: 8px 6px;
+  border-radius: 5px;
+  border: 1px dashed rgba(0, 0, 0, 0.05);
+  gap: 10px;
+}
+
+.add-color-box-container {
+  .text-container {
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    color: #909090;
+    transition: 0.1s;
+  }
+  &:hover {
+    cursor: pointer;
+    .text-container {
+      color: rgb(127, 127, 238);
+      transition: 0.1s;
+    }
+  }
+}
